@@ -2,32 +2,35 @@ package org.openjdk.hellofx;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * Classe d'application javafx
+ */
 public class App extends Application {
 
+    /**
+     * Fonction de lancement de la fenetre
+     */
     public static void main(String[] args) {
+        // Lancement de start
         launch(args);
     }
 
     @Override
+    /**
+     * Fonction appelee au lancement de la fenetre
+     * @param primaryStage Zone d'affichage de la fenetre
+     */
     public void start(Stage primaryStage) {
+        // Construction de la scene du menu
         Scene menu = Menu.getScene(primaryStage);
+        // Modification du titre de la fenetre
         primaryStage.setTitle("Incredible Polls");
+        // Scene affichee = menu
         primaryStage.setScene(menu);
+        // Affichage
         primaryStage.show();
     }
 }
